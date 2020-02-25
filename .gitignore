@@ -55,11 +55,15 @@ coverage.xml
 *.mo
 *.pot
 
+# Backup files # 
+*.bak 
+
 # Django stuff:
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+media
 
 # Flask stuff:
 instance/
@@ -127,3 +131,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Visual Studio Code # 
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
