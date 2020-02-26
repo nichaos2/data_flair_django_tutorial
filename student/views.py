@@ -41,3 +41,11 @@ def showcookie(request):
         return html
     else:
         return redirect(setcookie) # is this the right way to redirect
+
+def deletecookie(request):
+    if request.COOKIES.get('visits'):
+        response = HttpResponse("<h1>dataflair</h1><br><h2>The cookie has been deleted: <br> no cookie :( </h2>")
+        response.delete_cookie('visits')
+    else:
+        response = HttpResponse("<h1> There was no cookie to begin with... where is my cookie?</h1>")
+    return response

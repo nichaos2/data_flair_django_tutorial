@@ -9,4 +9,5 @@ urlpatterns = [
     path('djangotutor/', tutorial.as_view(), name = 'redirect'),
     path('setcookie/', setcookie),
     path('showcookie/', showcookie),
+    path('deletecookie/', deletecookie),
 ]
