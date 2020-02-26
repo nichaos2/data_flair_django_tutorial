@@ -49,3 +49,19 @@ def deletecookie(request):
     else:
         response = HttpResponse("<h1> There was no cookie to begin with... where is my cookie?</h1>")
     return response
+
+# session
+# test cookies
+def cookie_session(request):
+    '''
+    this creates a cookie in the page with the name sessionid
+    '''
+    request.session.set_test_cookie()
+    return HttpResponse("<h1>dataflair</h1>")
+def cookie_delete(request):
+    if request.session.test_cookie_worked():
+        request.session.delete_test_cookie()
+        response = HttpResponse("dataflair<br> cookie created")
+    else:
+        response = HttpResponse("dataflair<br> Your browser does not accept cookies")
+    return response

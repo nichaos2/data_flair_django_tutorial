@@ -10,4 +10,6 @@ urlpatterns = [
     path('setcookie/', setcookie),
     path('showcookie/', showcookie),
     path('deletecookie/', deletecookie),
+    path('testcookie/', cookie_session),
+    path('testcookiedelete/', cookie_delete),
 ]
