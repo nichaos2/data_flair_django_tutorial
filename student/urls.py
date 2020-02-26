@@ -6,5 +6,7 @@ from .views import *
 # localhost:port/student/djangotutor --> tutorial.as_view()
 urlpatterns = [
     path('', student_show, name = 'student_show'),
-    path('djangotutor/', tutorial.as_view(), name = 'redirect')
+    path('djangotutor/', tutorial.as_view(), name = 'redirect'),
+    path('setcookie/', setcookie),
+    path('showcookie/', showcookie),
 ]
